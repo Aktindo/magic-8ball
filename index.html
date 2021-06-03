@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Magic 8ball" property="og:title" />
+    <meta
+      content="Ask the magic 8ball a question! And let it respond back magically. "
+      property="og:description"
+    />
+    <meta content="https://aktindo.me/magic-8ball" property="og:url" />
+    <meta content="#3498DA" data-react-helmet="true" name="theme-color" />
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <title>Magic 8ball</title>
+  </head>
+  <body class="bg-base-100 text-base-content">
+    <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
+      <div class="flex-none px-2 mx-2">
+        <span class="text-lg font-bold"> Magic 8ball </span>
+      </div>
+      <div class="flex-1 px-2 mx-2">
+        <div class="items-stretch lg:flex">
+          <a class="btn btn-ghost btn-sm rounded-btn" href="/"
+            ><i class="fa-lg fas fa-home"></i
+          ></a>
+        </div>
+      </div>
+      <div class="flex-none">
+        <button
+          class="btn btn-ghost btn-sm rounded-btn"
+          onclick="changeTheme()"
+        >
+          <i id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="content mt-10">
+      <div class="content__heading text-center">
+        <h1 class="text-4xl">Magic 8ball</h1>
+        <p class="text-lg mt-2">
+          Ask the magic 8ball a question! And let it respond back magically.
+        </p>
+      </div>
+      <div class="card lg:card-side bordered mt-10 m-5">
+        <div class="card-body">
+          <h2 class="card-title">Ask the Question</h2>
+          <div class="form-control">
+            <input
+              id="questionInput"
+              type="text"
+              placeholder="Start writing..."
+              class="input input-primary input-bordered"
+            />
+          </div>
+          <div class="card-actions">
+            <button id="questionBtn" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="card lg:card-side bordered mt-10 m-5">
+        <div class="card-body">
+          <h2 class="card-title">The Magical Answer</h2>
+          <p id="answer">The answer will appear here!</p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/e513b21ba7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
